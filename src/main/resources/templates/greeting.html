@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting page</title>
+</head>
+<body>
+    <th:block th:if="${automaticData['isBannerShow']}">
+        <div th:insert="fragments :: banner" />
+    </th:block>
+    <h3>This is Greeting page</h3>
+    <div class="account">
+        <p>
+            <span th:text="'User name: '" />
+            <span th:text="${automaticData['credentials']['userName']}" style="font-weight: bold;"/>
+        </p>
+        <p>
+            <span th:text="'Role: '" />
+            <span th:text="${automaticData['credentials']['role']}" style="font-weight: bold;"/>
+        </p>
+    </div>
+    <a href="/">Go to Main page</a>
+    <script src="/script.js" th:if="${automaticData['isJsScriptEnable']}"></script>
+</body>
+</html>
+
+
