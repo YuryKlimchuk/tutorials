@@ -1,1 +1,1 @@
-Description for Automatic populate model
+Spring MVC: automatically populate model
