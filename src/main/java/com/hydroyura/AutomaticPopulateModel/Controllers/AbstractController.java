@@ -17,7 +17,9 @@ public abstract class AbstractController {
 
     @ModelAttribute(name = "automaticData")
     public Map<String, Object> getAutomaticData() {
-        return providers.stream().collect(Collectors.toMap(IModelProvider::getLabel, IModelProvider::getData));
+        return providers
+                .stream()
+                .collect(Collectors.toMap(IModelProvider::getLabel, IModelProvider::getData));
     }
 
 }
