@@ -1,12 +1,16 @@
-package com.hydroyura.BredcutsGenerating.bredcuts;
+package com.hydroyura.BreadcrumbsGenerating.Breadcrumbs;
 
-public class BredcutsItem {
+public class BreadcrumbsItem {
 
     private String url, title;
 
 
-    public BredcutsItem() {}
+    public BreadcrumbsItem() {}
 
+    public BreadcrumbsItem(String url, String title) {
+        this.url = url;
+        this.title = title;
+    }
 
     public String getUrl() {
         return url;
